@@ -1,0 +1,3 @@
+class ProductViewModels < Product
+  
+end

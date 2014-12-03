@@ -1,0 +1,15 @@
+<div id="profile-header" class="container">
+
+  <div id="profile-header-top" class="row">
+
+    <div class="col-md-7 col-xs-7" id="col-profile-user-image">
+      <%= image_tag(profile.avatar.url(:medium), :id=>"profile-user-image", :class=>"pull-right img-responsive img-circle") %>
+    </div>
+    <div class="col-md-5 col-xs-5" id="col-profile-info">
+      <h1><%= profile.firstname %> <%= profile.lastname %></h1>
+      <h5><%= profile.address %></h5>
+    </div>
+
+  </div>
+  <!--End header-top-->
+</div>

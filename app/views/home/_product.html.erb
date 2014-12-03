@@ -1,0 +1,48 @@
+<div class="row product">
+  <%= image_tag 'plus-white.png', class: 'sign' %>
+  <a href="/home/BurgerProfile">
+    <div class="col-md-4 col-sm-4 col-xs-4 product-image">
+        <%= image_tag(product.images.url(:thumb), class: 'img-responsive') %>
+        <div class="layer-product-image"></div>
+    </div>
+  </a>
+  <!--End product-image-->
+  <div class="col-md-8 col-sm-8 col-xs-8 product-reviews">
+    <div class="product-reviews-top">
+      <p class="product-reviews-score">
+        <span>29.8</span>
+      </p>
+
+      <div class="product-reviews-people">
+        <h6>REVIEWS</h6>
+
+        <div class="list-avatars">
+          <% for counter in 0..4 do  %>
+            <a href="/home/userprofile?id=2">
+                <%= image_tag 'user-avatar.png', class: 'avatar-reviewer img-circle' %>
+             </a>
+          <% end %>
+          <span class="num-reviewer pull-right">(+123)</span>
+        </div>
+        <!--End list-avatars-->
+      </div>
+      <!--End product-reviews-people-->
+    </div>
+    <!--End product-reviews-top-->
+
+    <div class="product-reviews-center">
+      <a href="/home/BurgerProfile"><h3 class="product-reviews-center-top"><%= product.name %></h3></a>
+      <h4 class="product-reviews-center-bottom"><%= product.restaurant.name %></h4>
+    </div>
+    <!--End product-reviews-center-->
+
+    <div class="product-btn-group">
+      <a href="/home/review"><button class="btn-control btn-review"><span class="icon"></span> REVIEW</button></a>
+      <button class="btn-control btn-share">SHARE</button>
+    </div>
+    <!--End product-btn-group-->
+
+  </div>
+  <!-- End product-reviews -->
+</div>
+<!-- End row product -->
